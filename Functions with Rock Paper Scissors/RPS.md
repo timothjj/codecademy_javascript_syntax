@@ -12,12 +12,8 @@ Rock destroys scissors.
 Scissors cut paper.
 Paper covers rock.
 If there’s a tie, then the game ends in a draw.
-Our code will break the game into four parts:
 
-Get the user’s choice.
-Get the computer’s choice.
-Compare the two choices and determine a winner.
-Start the program and display the results.
-If you get stuck during this project or would like to see an experienced developer work through it, select “Get Unstuck” to see a project walkthrough video.
+# Usage
 
--------
+node rockpaperscissors.js <your selection>
+node rockpaperscissors.js rock
