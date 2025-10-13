@@ -23,4 +23,3 @@ Start the program and display the results.
 If you get stuck during this project or would like to see an experienced developer work through it, select “Get Unstuck” to see a project walkthrough video.
 
 -------
-736AhuaStreet
