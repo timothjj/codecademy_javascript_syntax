@@ -1,7 +1,5 @@
 # Codecademy Javascript Syntax Projects
 
-# Part 1
-
 # Project 5: Rock Paper Scissors
 
 Practice JavaScript function syntax, passing data to functions, the return keyword, ES6 arrow functions, and concise body syntax.
@@ -23,4 +21,3 @@ Start the program and display the results.
 If you get stuck during this project or would like to see an experienced developer work through it, select “Get Unstuck” to see a project walkthrough video.
 
 -------
-736AhuaStreet
