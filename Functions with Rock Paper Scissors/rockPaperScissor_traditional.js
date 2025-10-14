@@ -21,32 +21,34 @@ function getComputerChoice() {
     return choice}
 }
 
-const determineWinner = (userChoice,computerChoice) => {
+function determineWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
-    return 'This game is a tie.';
-    }
+    return 'tie';
+  }
   if (userChoice === 'rock') {
     if (computerChoice === 'paper') {
       return 'You lose.';
     } else {
       return 'Winner! Winner!';
-      }
     }
+  }
   if (userChoice === 'paper') {
     if (computerChoice === 'scissors') {
       return 'You lose.';
     } else {
       return 'Winner! Winner!';
-      }
     }
+  }
   if (userChoice === 'scissors') {
     if (computerChoice === 'rock') {
       return 'You lose.';
     } else {
       return 'Winner! Winner!';
-      }
     }
   }
+
+  return 'Invalid input.';
+}
 
 function playGame() {
   const userChoice = getUserChoice('paper');
