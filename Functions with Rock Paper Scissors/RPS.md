@@ -16,4 +16,5 @@ If there’s a tie, then the game ends in a draw.
 # Usage
 
 node rockpaperscissors.js <your selection>
+
 node rockpaperscissors.js rock

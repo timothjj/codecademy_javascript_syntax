@@ -1,99 +1,61 @@
+// rock-paper-scissors.js
 
-/*  Using Traditional function syntax */
 const getUserChoice = function(userInput) {
   userInput = userInput.toLowerCase();
   if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-  return userInput} 
-  else {
-    return 'wrong'};
+    return userInput;
+  } else {
+    return 'wrong';
   }
-
-/*
-//Same function using arrow notation
-//Ex. const plantNeedsWater = day => day === 'Wednesday' ? true : false;;
-const getUserChoice = userInput => userInput.toLowerCase() ===
-userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' ? userInput : 'wrong';
-*/
-//console.log(getUserChoice('rock'));
-
+};
 
 function getComputerChoice() {
-  let choice = '';
-  let randomNumber = Math.floor(Math.random()*3);
+  const randomNumber = Math.floor(Math.random() * 3);
   if (randomNumber === 0) {
-    choice = 'rock';
+    return 'rock';
   } else if (randomNumber === 1) {
-    choice = 'paper';
-  } else if (randomNumber ===2) {
-    choice = 'scissors';
-  } { 
-    return choice}
+    return 'paper';
+  } else {
+    return 'scissors';
+  }
 }
 
-//console.log(getUserChoice('Rock'));
-//console.log(getComputerChoice());
-/*
-function determineWinner(userChoice,computerChoice) {
-  if (userChoice === computerChoice) {return 'tie';}
-    if (userChoice === 'rock' && computerChoice === 'paper') {
-    return 'You lose.';
-    } else {
-    return 'Winner! Winner!';
-  }
-  if (userChoice === 'paper' && computerChoice === 'scissors') {
-    return 'You lose';
-  } else {
-    return 'Winner! Winner!';
-  }
-  if (userChoice === 'scissors' && computerChoice === 'rock') {
-    return 'You lose.';
-  } else {
-    return 'Winner! Winner!';
-  }
-}
-*/
-
-const determineWinner = (userChoice,computerChoice) => {
+const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return 'This game is a tie.';
-    }
-  if (userChoice === 'rock') {
-    if (computerChoice === 'paper') {
-      return 'You lose.';
-    } else {
-      return 'Winner! Winner!';
-      }
-    }
-  if (userChoice === 'paper') {
-    if (computerChoice === 'scissors') {
-      return 'You lose.';
-    } else {
-      return 'Winner! Winner!';
-      }
-    }
-  if (userChoice === 'scissors') {
-    if (computerChoice === 'rock') {
-      return 'You lose.';
-    } else {
-      return 'Winner! Winner!';
-      }
-    }
   }
 
+  if (userChoice === 'rock') {
+    return computerChoice === 'paper' ? 'You lose.' : 'Winner! Winner!';
+  }
 
-//console.log(determineWinner());
-//console.log(determineWinner('rock','rock'));
-//console.log(determineWinner('rock','paper'));
-//console.log(determineWinner('paper','rock'));
+  if (userChoice === 'paper') {
+    return computerChoice === 'scissors' ? 'You lose.' : 'Winner! Winner!';
+  }
+
+  if (userChoice === 'scissors') {
+    return computerChoice === 'rock' ? 'You lose.' : 'Winner! Winner!';
+  }
+};
 
 function playGame() {
-  const userChoice = getUserChoice('paper');
+  const userArg = process.argv[2];
+
+  if (!userArg) {
+    console.log("Please provide your choice: rock, paper, or scissors.");
+    return;
+  }
+
+  const userChoice = getUserChoice(userArg);
+  if (userChoice === 'wrong') {
+    console.log("Invalid choice. Please choose rock, paper, or scissors.");
+    return;
+  }
+
   const computerChoice = getComputerChoice();
-  console.log(userChoice);
-  console.log(computerChoice);
-  console.log(determineWinner(userChoice,computerChoice));
+  console.log(`You chose: ${userChoice}`);
+  console.log(`Computer chose: ${computerChoice}`);
+  console.log(determineWinner(userChoice, computerChoice));
 }
 
-playGame()
-
-
+playGame();
