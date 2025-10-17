@@ -22,4 +22,6 @@ Youth registrants run at 12:30 pm (regardless of registration).
 
 # Usage
 
-node RaceRegistration.js <registeredEarly> <>
+`node RaceRegistration.js <registeredEarly> <age>`
+
+`node RaceRegistration.js true 22`
