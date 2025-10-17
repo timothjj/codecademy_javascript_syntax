@@ -1,4 +1,4 @@
-#Dog Years
+# Dog Years
 
 Convert your dog's age to dog years. 
 
@@ -6,7 +6,7 @@ Convert your dog's age to dog years.
 
 Install prompt-sync
 
-`npm install prompt-sync
+`npm install prompt-sync`
 
 node DogYears.js
 
