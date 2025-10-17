@@ -18,3 +18,7 @@ If there’s a tie, then the game ends in a draw.
 node rockpaperscissors.js <your selection>
 
 node rockpaperscissors.js rock
+
+# Next steps
+
+- Connect this script to a front end where a user can "choose your weapon" and start a battle
