@@ -10,7 +10,7 @@ Early adults receive a race number at or above 1000.
 
 All others receive a number below 1000.
 
-Start time:
+Start times:
 
 Adult registrants run at 9:30 am or 11:00 am.
 
