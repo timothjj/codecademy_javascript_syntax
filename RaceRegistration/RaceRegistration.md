@@ -25,3 +25,7 @@ Youth registrants run at 12:30 pm (regardless of registration).
 `node RaceRegistration.js <registeredEarly> <age>`
 
 `node RaceRegistration.js true 22`
+
+# To Do 
+
+Build a webfront that accepts users' registration information, runs the race registration function and saves the information to a database or at a json file.
